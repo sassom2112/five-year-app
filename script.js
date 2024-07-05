@@ -1,5 +1,4 @@
-// script.js
-// terminal commands with newlines for each line
+// Sample terminal commands with newlines for each line
 const markdownContent = `
     // Five Year Anniversary
     You are the best
@@ -21,7 +20,6 @@ const markdownContent = `
         commitment that is marriage.'
 `;
 
-
 // Get the terminal content element
 const terminalContent = document.getElementById('terminal-content');
 
@@ -37,7 +35,33 @@ function typeEffect() {
         index++;
         // Continue typing after a short delay
         setTimeout(typeEffect, 50);
+    } else {
+        // Add interactive part after the typing effect is done
+        addInteractivePart();
     }
+}
+
+// Function to add interactive part
+function addInteractivePart() {
+    const interactivePart = document.createElement('div');
+    interactivePart.className = 'interactive';
+    interactivePart.innerHTML = `
+        <p>Do you want to see a <span id="sanDiego" class="interactive-button">San Diego Photo</span>, <span id="cozumel" class="interactive-button">Cozumel Photo</span>, or <span id="cleveland" class="interactive-button">Cleveland Photo</span>?</p>
+    `;
+    terminalContent.appendChild(interactivePart);
+
+    // Add event listeners to the buttons
+    document.getElementById('sanDiego').addEventListener('click', () => showMedia('/assets/SDPhoto.jpeg'));
+    document.getElementById('cozumel').addEventListener('click', () => showMedia('/assets/mexicoPhoto.jpeg'));
+    document.getElementById('cleveland').addEventListener('click', () => showMedia('/assets/ClevePhoto.jpeg'));
+}
+
+// Function to show media
+function showMedia(src) {
+    const mediaContent = document.createElement('div');
+    mediaContent.className = 'media-content';
+    mediaContent.innerHTML = `<img src="${src}" alt="Selected Photo">`;
+    terminalContent.appendChild(mediaContent);
 }
 
 // Start the typing effect

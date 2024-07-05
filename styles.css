@@ -1,4 +1,3 @@
-/* styles.css */
 /* Basic reset and styling for the body */
 body {
   display: flex;
@@ -87,16 +86,6 @@ body {
   25%, 75% { opacity: 0; }
 }
 
-/* Terminal background noise */
-.terminal {
-  background: linear-gradient(135deg, #2d2d2d 25%, transparent 25%) -50px 0,
-              linear-gradient(225deg, #2d2d2d 25%, transparent 25%) -50px 0,
-              linear-gradient(315deg, #2d2d2d 25%, transparent 25%),
-              linear-gradient(45deg, #2d2d2d 25%, transparent 25%);
-  background-size: 100px 100px;
-  background-color: #1e1e1e;
-}
-
 /* Custom scrollbar styling */
 .terminal-content::-webkit-scrollbar {
   width: 8px;
@@ -111,35 +100,26 @@ body {
   background: #555555;
 }
 
-/* Syntax highlighting */
-.token.comment {
-  color: #6a9955;
+/* Interactive part styling */
+.interactive {
+  margin-top: 20px;
 }
 
-.token.command {
+.interactive-button {
   color: #569cd6;
+  cursor: pointer;
 }
 
-.token.function {
-  color: #dcdcaa;
+.interactive-button:hover {
+  text-decoration: underline;
 }
 
-.token.variable {
-  color: #9cdcfe;
+/* Media content styling */
+.media-content {
+  margin-top: 20px;
 }
 
-.token.keyword {
-  color: #c586c0;
-}
-
-.token.string {
-  color: #ce9178;
-}
-
-.token.boolean {
-  color: #569cd6;
-}
-
-.token.punctuation {
-  color: #d4d4d4;
+.media-content img {
+  max-width: 100%;
+  border-radius: 5px;
 }
