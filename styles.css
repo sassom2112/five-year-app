@@ -7,14 +7,19 @@ body {
   margin: 0;
   background-color: #1e1e1e;
   font-family: 'Courier New', Courier, monospace;
-  color: #ffffff;
+  color: #d6f9d4;
 }
 
 /* Terminal container styling */
 .terminal {
   width: 80%;
   max-width: 800px;
-  background-color: #2d2d2d;
+  background: linear-gradient(135deg, #41114f 25%, #18063a 25%) -50px 0,
+              linear-gradient(225deg, #2d2d2d 25%, #1c1b1e 25%) -50px 0,
+              linear-gradient(315deg, #2d2d2d 25%, #1c1b1e 25%),
+              linear-gradient(45deg, #2d2d2d 25%, #1c1b1e 25%);
+  background-size: 100px 100px;
+  background-color: #1c1b1e; /* Dark purple-embroidered color */
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
@@ -25,7 +30,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: #3b3b3b;
+  background-color: #0c4c28;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
@@ -59,6 +64,7 @@ body {
 .terminal-title {
   flex-grow: 1;
   text-align: center;
+  font font-weight: bold;
 }
 
 /* Terminal content area styling */
@@ -76,7 +82,7 @@ body {
   display: inline-block;
   width: 8px;
   height: 18px;
-  background-color: #ffffff;
+  background-color: #0bbae6;
   animation: blink 1s steps(1) infinite;
   margin-left: 2px;
 }

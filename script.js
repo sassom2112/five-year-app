@@ -1,15 +1,16 @@
 // terminal commands with newlines for each line
 const markdownContent = `
-    // Five Year Anniversary
+    // Five Year's Strong
     import { memories } from 'life';
     import { love } from 'heart';
 
     function fiveYearAnniversary() {
 
-    You are the best
+    You are the best() => {}
         at being my friend,
        at being my partner,
        at being my roommate
+}
 
      const Jocelyn = true;
      const result = Jocelyn
