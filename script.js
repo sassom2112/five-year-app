@@ -1,20 +1,31 @@
-// Sample terminal commands as a string
+// script.js
+// terminal commands with newlines for each line
 const markdownContent = `
-// Five Year Anniversary
-$ echo "You are the best"
-Hello, World!
+    // Five Year Anniversary
+    You are the best
+        at being my friend,
+       at being my partner,
+       at being my roommate
 
-$ ls -la
-total 8
-drwxr-xr-x  3 user  staff  96 Jul  5 12:00 .
-drwxr-xr-x  3 user  staff  96 Jul  5 12:00 ..
--rw-r--r--  1 user  staff   0 Jul  5 12:00 file.txt
+     const Jocelyn = true;
+     const result = Jocelyn
+        ? 'Ride'
+        : 'Die'
+
+     const message = 
+        'You are so patient and
+        so kind and everything that
+        I could ask for in this
+        ridiculous construct that
+        is a legally binding life-long
+        commitment that is marriage.'
 `;
+
 
 // Get the terminal content element
 const terminalContent = document.getElementById('terminal-content');
 
-// Convert the content string into an array of characters
+// Split the content into lines and characters
 const contentArray = markdownContent.split('');
 let index = 0;
 
@@ -22,7 +33,8 @@ let index = 0;
 function typeEffect() {
     if (index < contentArray.length) {
         // Append the next character to the terminal content
-        terminalContent.innerHTML += contentArray[index++];
+        terminalContent.innerHTML += contentArray[index] === '\n' ? '<br>' : contentArray[index];
+        index++;
         // Continue typing after a short delay
         setTimeout(typeEffect, 50);
     }
