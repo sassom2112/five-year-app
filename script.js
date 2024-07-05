@@ -1,6 +1,11 @@
-// Sample terminal commands with newlines for each line
+// terminal commands with newlines for each line
 const markdownContent = `
     // Five Year Anniversary
+    import { memories } from 'life';
+    import { love } from 'heart';
+
+    function fiveYearAnniversary() {
+
     You are the best
         at being my friend,
        at being my partner,
@@ -18,6 +23,9 @@ const markdownContent = `
         ridiculous construct that
         is a legally binding life-long
         commitment that is marriage.'
+};
+
+export default fiveYearAnniversary;
 `;
 
 // Get the terminal content element
@@ -46,7 +54,12 @@ function addInteractivePart() {
     const interactivePart = document.createElement('div');
     interactivePart.className = 'interactive';
     interactivePart.innerHTML = `
-        <p>Do you want to see a <span id="sanDiego" class="interactive-button">San Diego Photo</span>, <span id="cozumel" class="interactive-button">Cozumel Photo</span>, or <span id="cleveland" class="interactive-button">Cleveland Photo</span>?</p>
+        <p>Do you want to see a <span id="sanDiego" class="interactive-button">San Diego Photo
+            <img src="/assets/SDPhoto.jpeg" class="thumbnail" alt="San Diego Thumbnail"></span>,
+            <span id="cozumel" class="interactive-button">Cozumel Photo
+            <img src="/assets/mexicoPhoto.jpeg" class="thumbnail" alt="Cozumel Thumbnail"></span>,
+            or <span id="cleveland" class="interactive-button">Cleveland Photo
+            <img src="/assets/ClevePhoto.jpeg" class="thumbnail" alt="Cleveland Thumbnail"></span>?</p>
     `;
     terminalContent.appendChild(interactivePart);
 
