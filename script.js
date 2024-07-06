@@ -73,10 +73,16 @@ function addInteractivePart() {
 
 // Function to show media
 function showMedia(src) {
-    const mediaContent = document.createElement('div');
-    mediaContent.className = 'media-content';
-    mediaContent.innerHTML = `<img src="${src}" class='image' alt="Selected Photo">`;
-    terminalContent.appendChild(mediaContent);
+    // Check if there's already an image displayed
+    let mediaContent = document.querySelector('.media-content');
+    if (!mediaContent) {
+        // Create a new media content element if it doesn't exist
+        mediaContent = document.createElement('div');
+        mediaContent.className = 'media-content';
+        terminalContent.appendChild(mediaContent);
+    }
+    // Update the image source
+    mediaContent.innerHTML = `<img src="${src}" alt="Selected Photo">`;
 
     // Add the "Do you wish to continue? Yes or No" prompt after the media
     addContinuePrompt();
@@ -84,16 +90,21 @@ function showMedia(src) {
 
 // Function to add the "Do you wish to continue?" prompt
 function addContinuePrompt() {
-    const continuePrompt = document.createElement('div');
-    continuePrompt.className = 'continue-prompt';
-    continuePrompt.innerHTML = `
-        <p>Do you wish to continue? <span id="yes" class="interactive-button">Yes</span> or <span id="no" class="interactive-button">No</span>?</p>
-    `;
-    terminalContent.appendChild(continuePrompt);
+    // Check if there's already a continue prompt displayed
+    let continuePrompt = document.querySelector('.continue-prompt');
+    if (!continuePrompt) {
+        // Create a new continue prompt element if it doesn't exist
+        continuePrompt = document.createElement('div');
+        continuePrompt.className = 'continue-prompt';
+        continuePrompt.innerHTML = `
+            <p>Do you wish to continue? <span id="yes" class="interactive-button">Yes</span> or <span id="no" class="interactive-button">No</span>?</p>
+        `;
+        terminalContent.appendChild(continuePrompt);
 
-    // Add event listeners to the Yes and No buttons
-    document.getElementById('yes').addEventListener('click', continueYes);
-    document.getElementById('no').addEventListener('click', continueNo);
+        // Add event listeners to the Yes and No buttons
+        document.getElementById('yes').addEventListener('click', continueYes);
+        document.getElementById('no').addEventListener('click', continueNo);
+    }
 }
 
 // Function to handle "Yes" click
