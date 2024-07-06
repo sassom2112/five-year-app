@@ -212,3 +212,13 @@ body {
   color: black;
   font-weight: bold;
 }
+
+/* Keyframes for comic text animation */
+@keyframes comic {
+  0%, 100% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(5deg);
+  }
+}
