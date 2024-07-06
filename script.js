@@ -66,9 +66,9 @@ function addInteractivePart() {
     terminalContent.appendChild(interactivePart);
 
     // Add event listeners to the buttons
-    document.getElementById('sanDiego').addEventListener('click', () => showMedia('/assets/SDPhoto.jpeg'));
-    document.getElementById('cozumel').addEventListener('click', () => showMedia('/assets/mexicoPhoto.jpeg'));
-    document.getElementById('cleveland').addEventListener('click', () => showMedia('/assets/ClevePhoto.jpeg'));
+    document.getElementById('sanDiego').addEventListener('click', () => showMedia('assets/SDPhoto.jpeg'));
+    document.getElementById('cozumel').addEventListener('click', () => showMedia('assets/mexicoPhoto.jpeg'));
+    document.getElementById('cleveland').addEventListener('click', () => showMedia('assets/ClevePhoto.jpeg'));
 }
 
 // Function to show media
