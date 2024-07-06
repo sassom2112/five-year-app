@@ -66,16 +66,16 @@ function addInteractivePart() {
     terminalContent.appendChild(interactivePart);
 
     // Add event listeners to the buttons
-    document.getElementById('sanDiego').addEventListener('click', () => showMedia('assets/SDPhoto.jpeg'));
-    document.getElementById('cozumel').addEventListener('click', () => showMedia('assets/mexicoPhoto.jpeg'));
-    document.getElementById('cleveland').addEventListener('click', () => showMedia('assets/ClevePhoto.jpeg'));
+    document.getElementById('sanDiego').addEventListener('click', () => showMedia("assets/SDPhoto.jpeg"));
+    document.getElementById('cozumel').addEventListener('click', () => showMedia("assets/mexicoPhoto.jpeg"));
+    document.getElementById('cleveland').addEventListener('click', () => showMedia("assets/ClevePhoto.jpeg"));
 }
 
 // Function to show media
 function showMedia(src) {
     const mediaContent = document.createElement('div');
     mediaContent.className = 'media-content';
-    mediaContent.innerHTML = `<img src="${src}" alt="Selected Photo">`;
+    mediaContent.innerHTML = `<img src="${src}" class='image' alt="Selected Photo">`;
     terminalContent.appendChild(mediaContent);
 
     // Add the "Do you wish to continue? Yes or No" prompt after the media

@@ -149,6 +149,13 @@ body {
   margin-top: 20px;
 }
 
+/* Media content styling */
+.media-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
 /* Overlay styling */
 .overlay {
   position: fixed;
