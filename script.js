@@ -57,11 +57,11 @@ function addInteractivePart() {
     interactivePart.className = 'interactive';
     interactivePart.innerHTML = `
         <p>Do you want to see a <span id="sanDiego" class="interactive-button">San Diego Photo
-            <img src="/assets/SDPhoto.jpeg" class="thumbnail" alt="San Diego Thumbnail"></span>,
+            <img src="assets/SDPhoto.jpeg" class="thumbnail" alt="San Diego Thumbnail"></span>,
             <span id="cozumel" class="interactive-button">Cozumel Photo
-            <img src="/assets/mexicoPhoto.jpeg" class="thumbnail" alt="Cozumel Thumbnail"></span>,
+            <img src="assets/mexicoPhoto.jpeg" class="thumbnail" alt="Cozumel Thumbnail"></span>,
             or <span id="cleveland" class="interactive-button">Cleveland Photo
-            <img src="/assets/ClevePhoto.jpeg" class="thumbnail" alt="Cleveland Thumbnail"></span>?</p>
+            <img src="assets/ClevePhoto.jpeg" class="thumbnail" alt="Cleveland Thumbnail"></span>?</p>
     `;
     terminalContent.appendChild(interactivePart);
 

@@ -12,8 +12,8 @@ body {
 
 /* Terminal container styling */
 .terminal {
-  width: 80%;
-  max-width: 800px;
+  width: 100%;
+  max-width: none; /* Remove max-width constraint */
   background: linear-gradient(135deg, #41114f 25%, #18063a 25%) -50px 0,
               linear-gradient(225deg, #2d2d2d 25%, #1c1b1e 25%) -50px 0,
               linear-gradient(315deg, #2d2d2d 25%, #1c1b1e 25%),
@@ -22,6 +22,7 @@ body {
   background-color: #1c1b1e; /* Dark purple-embroidered color */
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden; /* Ensure content doesn't overflow */
 }
 
 /* Terminal header styling */
@@ -202,6 +203,10 @@ body {
 
 /* Comic text styling */
 .comic {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 2em;
   animation: comic 1s ease-in-out infinite;
   background-color: yellow;
@@ -216,9 +221,9 @@ body {
 /* Keyframes for comic text animation */
 @keyframes comic {
   0%, 100% {
-    transform: rotateZ(0deg);
+    transform: translateX(-50%) rotateZ(0deg);
   }
   50% {
-    transform: rotateZ(5deg);
+    transform: translateX(-50%) rotateZ(5deg);
   }
 }
