@@ -27,7 +27,7 @@ const markdownContent = `
         commitment that is marriage.'
 };
 
-export default fiveYear...;
+export default fiveYearAnniversary;
 `;
 
 // Get the terminal content element
@@ -114,7 +114,7 @@ function continueYes() {
     overlay.innerHTML = `
         <div class="scene">
             <div class="ring"></div>
-            <div class="comic">🥑 You're my Hero 🥑</div>
+            <div class="comic">🥑 tl;dr Ur my PiC 🥑</div>
         </div>
     `;
     document.body.appendChild(overlay);
