@@ -27,7 +27,7 @@ const markdownContent = `
         commitment that is marriage.'
 };
 
-export default fiveYearAnniversary;
+export default fiveYear...;
 `;
 
 // Get the terminal content element
